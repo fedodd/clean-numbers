@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>clean numbers</title>
+  <style>
+
+    body {
+      text-align: center;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      margin: 30px;
+    }
+
+    form {  
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    textarea {
+      font-size: 16px;
+      margin: 0 20px;
+      font-family: inherit;
+    }
+
+    .result {
+        width: 300px;
+        background-color: lightgreen;
+        min-height: 100px;
+      }
+    
+    p {
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .button {
+      background-color: black;
+      border: 1px solid grey;
+      box-shadow: 1px 1px 0px 0px lightgrey;
+      color: white;
+      padding: 10px 20px;
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <p class="resultText">Вставьте текст, а я удалю всё, кроме чисел, и разделю эти числа запятой. Можно вставить любой текст откуда
+    угодно: скопировать из екселя или мессенджера.</p>
+    <p>Результат будет скопирован сразу в буфер обмена — можно сразу нажимать ctrl+v для вставки.</p>
+  </header>
+  <div class="holder">
+    <form class="form">
+      <textarea class="inputArea" rows="10" cols="40">Введите список сюда</textarea>
+      <input class="button" type="button" value="очистить список" />
+      <textarea class="outputArea" rows="10" cols="40">здесь будет результат</textarea>
+    </form>
+  </div>
+</body>
+<script type="text/javascript" src="./index.js"></script>
+</html>
