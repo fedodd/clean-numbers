@@ -16,7 +16,23 @@ button.addEventListener('click', e => {
     return acc;
   }, []);
   (newResult[newResult.length -1] === ',') ? newResult.pop(): null;
-  resultarea.value= newResult.join('');
+
+  const cleanResult = (charArr) => {
+    let arr = charArr.join('').split(',');
+    var obj = {};
+
+    for (var i = 0; i < arr.length; i++) {
+      var str = arr[i];
+      obj[str] = true; // запомнить строку в виде свойства объекта
+    }
+
+    return  Object.keys(obj).sort(function (a, b) {
+      return a - b;
+    });
+  }
+
+  console.log(cleanResult(newResult));
+  resultarea.value = cleanResult(newResult).join(',');
   resultarea.select();
   document.execCommand("copy");
   if (resultarea.value === '') {
